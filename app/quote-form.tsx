@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useRef, useState } from "react";
+import { FormEvent, useEffect, useRef, useState } from "react";
 import { CheckCircle2, FileBox, Link2, LoaderCircle, Paperclip, Send, X } from "lucide-react";
 
 const MAX_FILE_SIZE = 25 * 1024 * 1024;
@@ -10,6 +10,14 @@ export function QuoteForm() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [error, setError] = useState("");
   const fileRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    const sensitiveFields = ["name", "email", "projectType", "material", "projectUrl", "message", "file", "consent"];
+    const query = new URLSearchParams(window.location.search);
+    if (sensitiveFields.some((field) => query.has(field))) {
+      window.history.replaceState(null, "", `${window.location.pathname}${window.location.hash}`);
+    }
+  }, []);
 
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault(); setError("");
@@ -27,7 +35,7 @@ export function QuoteForm() {
   if (status === "success") return <div className="quote-form success-state"><CheckCircle2 /><span>Zgłoszenie wysłane</span><h3>Dziękujemy!</h3><p>Materiały dotarły. Przeanalizujemy projekt i skontaktujemy się z Tobą w sprawie wyceny.</p><button type="button" onClick={() => setStatus("idle")}>Wyślij kolejne zgłoszenie</button></div>;
 
   return (
-    <form className="quote-form" onSubmit={submit}>
+    <form className="quote-form" method="post" action="/api/quote" onSubmit={submit}>
       <div className="form-head"><span>Formularz wyceny</span><FileBox /></div>
       <div className="field-row"><label>Imię i nazwisko<input name="name" required maxLength={100} placeholder="Jan Kowalski" /></label><label>E-mail<input name="email" type="email" required maxLength={160} placeholder="jan@email.pl" /></label></div>
       <div className="field-row"><label>Rodzaj projektu<select name="projectType" defaultValue=""><option value="" disabled>Wybierz</option><option>Druk z gotowego modelu</option><option>Projektowanie i druk</option><option>Część techniczna</option><option>Prototyp</option><option>Modelarstwo RC</option><option>Inne</option></select></label><label>Preferowany materiał<select name="material" defaultValue="Nie wiem — proszę o pomoc"><option>Nie wiem — proszę o pomoc</option><option>PLA</option><option>PETG</option><option>ABS</option><option>ASA</option><option>LW-PLA</option></select></label></div>
