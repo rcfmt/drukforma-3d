@@ -38,7 +38,7 @@ function doPost(e) {
     ].join("\n");
     quoteFolder.createFile("zapytanie.txt", details, MimeType.PLAIN_TEXT);
 
-    GmailApp.sendEmail(
+    MailApp.sendEmail(
       notifyEmail,
       "Nowa wycena DrukForma 3D — " + quote.name,
       details + "\n\nFolder w Google Drive: " + quoteFolder.getUrl(),
