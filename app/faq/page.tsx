@@ -17,7 +17,7 @@ const questions = [
   { q: "Czy wykonujecie duże wydruki?", a: "Tak, oferujemy druk wielkoformatowy. W zależności od geometrii element może powstać w całości albo w częściach zaprojektowanych do późniejszego połączenia." },
   { q: "Czy realizujecie pojedyncze sztuki i krótkie serie?", a: "Tak. Wykonujemy zarówno pojedyncze elementy i prototypy, jak i niewielkie serie. Przy większej liczbie sztuk sprawdzamy powtarzalność oraz najbardziej ekonomiczny układ realizacji." },
   { q: "Jak długo trwa realizacja?", a: "Termin zależy od wielkości, czasu druku, materiału, liczby sztuk i aktualnego obłożenia. Przewidywany termin podajemy razem z wyceną przed rozpoczęciem realizacji." },
-  { q: "Czy wysyłacie wydruki w całej Polsce?", a: "Tak. Możliwa jest wysyłka na terenie całej Polski oraz odbiór osobisty w Dąbrowie Górniczej po wcześniejszym ustaleniu." },
+  { q: "Czy wysyłacie wydruki w całej Polsce?", a: "Tak. Gotowe wydruki wysyłamy InPost kurierem lub do Paczkomatu na terenie całej Polski. Możliwy jest także odbiór osobisty w Dąbrowie Górniczej po wcześniejszym ustaleniu." },
   { q: "Czy każdy element można wykonać metodą FDM?", a: "Nie. Ograniczeniem mogą być wymagane tolerancje, obciążenia, temperatura, kontakt z żywnością lub znaczenie części dla bezpieczeństwa. Przed wyceną oceniamy, czy FDM jest odpowiednią technologią." },
   { q: "Czy moje pliki są bezpieczne?", a: "Pliki przesłane przez formularz wykorzystujemy do analizy i przygotowania wyceny. Jeśli projekt wymaga dodatkowych ustaleń dotyczących poufności, opisz to w wiadomości." },
 ];

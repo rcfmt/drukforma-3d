@@ -32,7 +32,7 @@ export default function Home() {
         <Image className="hero-image" src="/assets/hero-3d-printer.png" alt="Drukarka 3D FDM drukująca precyzyjny element techniczny" fill priority sizes="100vw" />
         <div className="hero-overlay" />
         <div className="hero-content">
-          <div className="eyebrow"><span /> Dąbrowa Górnicza · wysyłka w całej Polsce</div>
+          <div className="eyebrow"><span /> Dąbrowa Górnicza · wysyłka InPost w całej Polsce</div>
           <h1>Twój pomysł.<br />Nasz <em>wydruk.</em></h1>
           <p>Profesjonalny druk 3D FDM i projektowanie modeli na zamówienie. Od szkicu lub pliku STL do gotowego elementu.</p>
           <div className="hero-actions"><a className="btn-primary" href="#wycena">Bezpłatna wycena <ChevronRight size={18} /></a><a className="btn-ghost" href="#uslugi">Zobacz możliwości</a></div>
@@ -56,14 +56,14 @@ export default function Home() {
         <div className="material-list">{materials.map((item, index) => <article className="material-row" key={item.name}><span className="material-index">0{index + 1}</span><span className="filament-dot" style={{ "--filament": item.color } as React.CSSProperties} /><h3>{item.name}</h3><span className="material-tag">{item.tag}</span><p>{item.text}</p></article>)}</div>
       </section>
 
-      <section className="process" id="proces"><div className="process-title"><span className="kicker light">Prosty proces</span><h2>Jak wygląda<br />realizacja?</h2></div><div className="process-steps"><article><span>1</span><div><h3>Wyślij materiały</h3><p>Dodaj plik, link, zdjęcie, szkic lub po prostu opisz, czego potrzebujesz.</p></div></article><article><span>2</span><div><h3>Otrzymaj wycenę</h3><p>Przeanalizujemy projekt, dobierzemy materiał i przedstawimy indywidualną ofertę.</p></div></article><article><span>3</span><div><h3>Druk i dostawa</h3><p>Po akceptacji drukujemy element. Odbierzesz go osobiście lub wyślemy pod wskazany adres.</p></div></article></div></section>
+      <section className="process" id="proces"><div className="process-title"><span className="kicker light">Prosty proces</span><h2>Jak wygląda<br />realizacja?</h2></div><div className="process-steps"><article><span>1</span><div><h3>Wyślij materiały</h3><p>Dodaj plik, link, zdjęcie, szkic lub po prostu opisz, czego potrzebujesz.</p></div></article><article><span>2</span><div><h3>Otrzymaj wycenę</h3><p>Przeanalizujemy projekt, dobierzemy materiał i przedstawimy indywidualną ofertę.</p></div></article><article><span>3</span><div><h3>Druk i dostawa</h3><p>Po akceptacji drukujemy element. Odbierzesz go osobiście lub wyślemy InPost pod wskazany adres albo do Paczkomatu.</p></div></article></div></section>
 
       <section className="quote-section" id="wycena">
-        <div className="quote-intro"><span className="kicker">Bezpłatna, niezobowiązująca wycena</span><h2>Masz model?<br />A może tylko <em>pomysł?</em></h2><p>Prześlij plik STL lub 3MF, wklej link do znalezionego projektu albo opisz potrzebny element. Wrócimy do Ciebie z propozycją wykonania.</p><ul><li><Check size={16} /> Dobór materiału i parametrów</li><li><Check size={16} /> Indywidualna wycena</li><li><Check size={16} /> Odbiór osobisty lub wysyłka</li></ul><div className="location"><MapPin /><div><strong>Dąbrowa Górnicza</strong><span>woj. śląskie · wysyłka w całej Polsce</span></div></div></div>
+        <div className="quote-intro"><span className="kicker">Bezpłatna, niezobowiązująca wycena</span><h2>Masz model?<br />A może tylko <em>pomysł?</em></h2><p>Prześlij plik STL lub 3MF, wklej link do znalezionego projektu albo opisz potrzebny element. Wrócimy do Ciebie z propozycją wykonania.</p><ul><li><Check size={16} /> Dobór materiału i parametrów</li><li><Check size={16} /> Indywidualna wycena</li><li><Check size={16} /> Odbiór osobisty lub wysyłka InPost</li></ul><div className="location"><MapPin /><div><strong>Dąbrowa Górnicza</strong><span>woj. śląskie · wysyłka InPost w całej Polsce</span></div></div></div>
         <QuoteForm />
       </section>
 
-      <section className="trust-strip"><div><ShieldCheck /><span><strong>Bezpieczne zgłoszenie</strong>Twoje pliki służą wyłącznie do wyceny</span></div><div><PackageCheck /><span><strong>Wysyłka w całej Polsce</strong>Solidnie zapakowany gotowy element</span></div><div><Layers3 /><span><strong>Pomoc techniczna</strong>Materiał i konstrukcja dobrane do zadania</span></div></section>
+      <section className="trust-strip"><div><ShieldCheck /><span><strong>Bezpieczne zgłoszenie</strong>Twoje pliki służą wyłącznie do wyceny</span></div><div><PackageCheck /><span><strong>Wysyłka InPost</strong>Kurier lub Paczkomat w całej Polsce</span></div><div><Layers3 /><span><strong>Pomoc techniczna</strong>Materiał i konstrukcja dobrane do zadania</span></div></section>
       <SiteFooter />
     </main>
   );

@@ -16,13 +16,13 @@ export const servicePages: ServicePage[] = [
     slug: "druk-3d-na-zamowienie-dabrowa-gornicza",
     title: "Druk 3D na zamówienie w Dąbrowie Górniczej",
     shortTitle: "Druk 3D Dąbrowa Górnicza",
-    description: "Druk 3D FDM na zamówienie w Dąbrowie Górniczej. PLA, PETG, ABS, ASA i LW-PLA. Odbiór osobisty lub wysyłka w całej Polsce.",
+    description: "Druk 3D FDM na zamówienie w Dąbrowie Górniczej. PLA, PETG, ABS, ASA i LW-PLA. Odbiór osobisty lub wysyłka InPost w całej Polsce.",
     lead: "Lokalna realizacja, indywidualna wycena i pomoc w wyborze materiału — od pliku STL do gotowego elementu.",
     intro: [
       "DrukForma 3D realizuje wydruki FDM dla klientów prywatnych i firm z Dąbrowy Górniczej, Zagłębia i całej Polski. Możesz przesłać gotowy plik STL lub 3MF, link do legalnie udostępnionego modelu albo sam opis potrzebnego elementu.",
       "Dobieramy materiał i parametry do zastosowania części. Małe elementy wykonujemy z naciskiem na dokładność i powtarzalność, a większe projekty możemy realizować dzięki możliwości druku wielkoformatowego.",
     ],
-    benefits: ["Bezpłatna wycena na podstawie pliku, linku lub opisu", "PLA, PETG, ABS, ASA i LW-PLA", "Odbiór osobisty w Dąbrowie Górniczej", "Bezpieczna wysyłka w całej Polsce"],
+    benefits: ["Bezpłatna wycena na podstawie pliku, linku lub opisu", "PLA, PETG, ABS, ASA i LW-PLA", "Odbiór osobisty w Dąbrowie Górniczej", "Bezpieczna wysyłka InPost w całej Polsce"],
     applications: ["Uchwyty i mocowania", "Obudowy i adaptery", "Organizery i akcesoria", "Prototypy", "Elementy dekoracyjne", "Części do modeli RC"],
     process: ["Przesyłasz model, link albo opis projektu.", "Sprawdzamy geometrię, zastosowanie i dobieramy materiał.", "Otrzymujesz wycenę i ustalenia przed rozpoczęciem druku.", "Po akceptacji drukujemy, kontrolujemy i przekazujemy lub wysyłamy część."],
     faq: [
