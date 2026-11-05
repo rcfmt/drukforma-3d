@@ -1,17 +1,18 @@
 import Image from "next/image";
 import {
-  ArrowDownRight, Box, Check, ChevronRight, Layers3, MapPin,
+  ArrowDownRight, Check, ChevronRight, Layers3, MapPin,
   PackageCheck, PenTool, Plane, Printer, Ruler, ShieldCheck, Sparkles, Wrench,
 } from "lucide-react";
 import { QuoteForm } from "./quote-form";
+import { SiteFooter, SiteHeader } from "./site-chrome";
 
 const services = [
-  { icon: Printer, title: "Druk z gotowego modelu", text: "STL, 3MF i inne popularne formaty. Realizujemy również projekty z MakerWorld, Thingiverse, Printables i Cults3D — zgodnie z licencją modelu.", number: "01" },
-  { icon: PenTool, title: "Projektowanie 3D", text: "Od szkicu, zdjęcia lub opisu do gotowego modelu i wydruku. Projekt dopasowujemy do funkcji, materiału i warunków pracy.", number: "02" },
-  { icon: Wrench, title: "Części techniczne", text: "Uchwyty, obudowy, mocowania, adaptery i części zamienne dopasowane do konkretnego zastosowania.", number: "03" },
-  { icon: Ruler, title: "Prototypy", text: "Pojedyncze egzemplarze i krótkie serie dla firm, konstruktorów oraz klientów indywidualnych.", number: "04" },
-  { icon: Plane, title: "Modelarstwo RC", text: "Lekkie i precyzyjne części do samolotów, dronów oraz innych modeli — także w LW-PLA.", number: "05" },
-  { icon: Sparkles, title: "Elementy użytkowe", text: "Organizery, akcesoria domowe, dekoracje i spersonalizowane przedmioty tworzone na zamówienie.", number: "06" },
+  { icon: Printer, title: "Druk z gotowego modelu", text: "STL, 3MF i inne popularne formaty. Realizujemy również projekty z legalnie udostępnionych modeli.", number: "01", href: "/uslugi/druk-3d-na-zamowienie-dabrowa-gornicza" },
+  { icon: PenTool, title: "Projektowanie 3D", text: "Od szkicu, zdjęcia lub opisu do gotowego modelu i wydruku. Projekt dopasowujemy do funkcji, materiału i warunków pracy.", number: "02", href: "/uslugi/projektowanie-modeli-3d" },
+  { icon: Wrench, title: "Części techniczne", text: "Uchwyty, obudowy, mocowania, adaptery i części zamienne dopasowane do konkretnego zastosowania.", number: "03", href: "/uslugi/czesci-zamienne" },
+  { icon: Ruler, title: "Prototypy", text: "Pojedyncze egzemplarze i krótkie serie dla firm, konstruktorów oraz klientów indywidualnych.", number: "04", href: "/uslugi/prototypy-fdm" },
+  { icon: Plane, title: "Modelarstwo RC", text: "Lekkie i precyzyjne części do samolotów, dronów oraz innych modeli — także w LW-PLA.", number: "05", href: "/uslugi/modelarstwo-rc" },
+  { icon: Sparkles, title: "Elementy użytkowe", text: "Organizery, akcesoria domowe, dekoracje i spersonalizowane przedmioty tworzone na zamówienie.", number: "06", href: "/#wycena" },
 ];
 
 const materials = [
@@ -25,11 +26,7 @@ const materials = [
 export default function Home() {
   return (
     <main>
-      <header className="site-header">
-        <a className="brand" href="#top" aria-label="DrukForma 3D — strona główna"><span className="brand-mark"><Layers3 size={20} strokeWidth={2.4} /></span><span>DRUKFORMA <span>3D</span></span></a>
-        <nav aria-label="Główna nawigacja"><a href="#uslugi">Usługi</a><a href="#materialy">Materiały</a><a href="#proces">Jak to działa</a><a href="#kontakt">Kontakt</a></nav>
-        <a className="header-cta" href="#wycena">Wyceń projekt <ArrowDownRight size={16} /></a>
-      </header>
+      <SiteHeader />
 
       <section className="hero" id="top">
         <Image className="hero-image" src="/assets/hero-3d-printer.png" alt="Drukarka 3D FDM drukująca precyzyjny element techniczny" fill priority sizes="100vw" />
@@ -46,12 +43,12 @@ export default function Home() {
 
       <section className="section services" id="uslugi">
         <div className="section-heading"><div><span className="kicker">Co możemy dla Ciebie zrobić</span><h2>Od pomysłu do<br /><em>gotowego elementu</em></h2></div><p>Łączymy projektowanie z precyzyjnym drukiem FDM. Doradzimy materiał, parametry i konstrukcję, aby część naprawdę spełniała swoje zadanie.</p></div>
-        <div className="service-grid">{services.map(({ icon: Icon, title, text, number }) => <article className="service-card" key={title}><span className="service-number">{number}</span><Icon className="service-icon" size={30} /><h3>{title}</h3><p>{text}</p><span className="card-line" /></article>)}</div>
+        <div className="service-grid">{services.map(({ icon: Icon, title, text, number, href }) => <a className="service-card" href={href} key={title}><span className="service-number">{number}</span><Icon className="service-icon" size={30} /><h3>{title}</h3><p>{text}</p><span className="card-line" /></a>)}</div>
       </section>
 
       <section className="machines">
-        <div className="machine-copy"><span className="kicker light">Zaplecze techniczne</span><h2>Mały detal.<br />Duży format.</h2><p>Dwie uzupełniające się drukarki pozwalają realizować zarówno precyzyjne części, jak i projekty o większych gabarytach.</p></div>
-        <div className="machine-list"><article><span>01</span><div><h3>Bambu Lab P2S</h3><p>Precyzja, szybkość i powtarzalność dla wymagających elementów.</p></div><Printer /></article><article><span>02</span><div><h3>Elegoo Neptune 3 Max</h3><p>Duży obszar roboczy do realizacji większych projektów.</p></div><Box /></article></div>
+        <div className="machine-copy"><span className="kicker light">Możliwości produkcyjne</span><h2>Mały detal.<br />Duży format.</h2><p>Realizujemy zarówno precyzyjne części, jak i projekty o większych gabarytach — bez wiązania usługi z konkretną marką urządzenia.</p></div>
+        <div className="machine-list"><article><span>01</span><div><h3>Druk wielkoformatowy</h3><p>Duży obszar roboczy pozwala wykonywać większe elementy w całości lub projektować je w przemyślanych, łatwych do połączenia częściach.</p></div><Printer /></article><article><span>02</span><div><h3>Precyzyjne elementy</h3><p>Dobieramy parametry druku do geometrii, oczekiwanej jakości powierzchni i zastosowania gotowej części.</p></div><Ruler /></article></div>
       </section>
 
       <section className="section materials" id="materialy">
@@ -67,7 +64,7 @@ export default function Home() {
       </section>
 
       <section className="trust-strip"><div><ShieldCheck /><span><strong>Bezpieczne zgłoszenie</strong>Twoje pliki służą wyłącznie do wyceny</span></div><div><PackageCheck /><span><strong>Wysyłka w całej Polsce</strong>Solidnie zapakowany gotowy element</span></div><div><Layers3 /><span><strong>Pomoc techniczna</strong>Materiał i konstrukcja dobrane do zadania</span></div></section>
-      <footer id="kontakt"><a className="brand footer-brand" href="#top"><span className="brand-mark"><Layers3 size={20} /></span><span>DRUKFORMA <span>3D</span></span></a><p>Druk 3D na zamówienie — od pomysłu do gotowego elementu.</p><div><a href="#uslugi">Usługi</a><a href="#materialy">Materiały</a><a href="#wycena">Wycena</a></div><small>© {new Date().getFullYear()} DrukForma 3D · Dąbrowa Górnicza</small></footer>
+      <SiteFooter />
     </main>
   );
 }
