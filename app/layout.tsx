@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Druk 3D na zamówienie | Dąbrowa Górnicza",
-  description: "Profesjonalny druk 3D FDM i projektowanie modeli 3D na zamówienie. PLA, PETG, ABS, ASA i LW-PLA. Odbiór w Dąbrowie Górniczej lub wysyłka.",
+  title: "DrukForma 3D | Druk 3D na zamówienie",
+  description: "DrukForma 3D — profesjonalny druk 3D FDM i projektowanie modeli 3D na zamówienie. PLA, PETG, ABS, ASA i LW-PLA. Dąbrowa Górnicza i wysyłka.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",

@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <main>
       <header className="site-header">
-        <a className="brand" href="#top" aria-label="Druk 3D — strona główna"><span className="brand-mark"><Layers3 size={20} strokeWidth={2.4} /></span><span>DRUK<span>3D</span></span></a>
+        <a className="brand" href="#top" aria-label="DrukForma 3D — strona główna"><span className="brand-mark"><Layers3 size={20} strokeWidth={2.4} /></span><span>DRUKFORMA <span>3D</span></span></a>
         <nav aria-label="Główna nawigacja"><a href="#uslugi">Usługi</a><a href="#materialy">Materiały</a><a href="#proces">Jak to działa</a><a href="#kontakt">Kontakt</a></nav>
         <a className="header-cta" href="#wycena">Wyceń projekt <ArrowDownRight size={16} /></a>
       </header>
@@ -67,7 +67,7 @@ export default function Home() {
       </section>
 
       <section className="trust-strip"><div><ShieldCheck /><span><strong>Bezpieczne zgłoszenie</strong>Twoje pliki służą wyłącznie do wyceny</span></div><div><PackageCheck /><span><strong>Wysyłka w całej Polsce</strong>Solidnie zapakowany gotowy element</span></div><div><Layers3 /><span><strong>Pomoc techniczna</strong>Materiał i konstrukcja dobrane do zadania</span></div></section>
-      <footer id="kontakt"><a className="brand footer-brand" href="#top"><span className="brand-mark"><Layers3 size={20} /></span><span>DRUK<span>3D</span></span></a><p>Druk 3D na zamówienie — od pomysłu do gotowego elementu.</p><div><a href="#uslugi">Usługi</a><a href="#materialy">Materiały</a><a href="#wycena">Wycena</a></div><small>© {new Date().getFullYear()} Druk 3D · Dąbrowa Górnicza</small></footer>
+      <footer id="kontakt"><a className="brand footer-brand" href="#top"><span className="brand-mark"><Layers3 size={20} /></span><span>DRUKFORMA <span>3D</span></span></a><p>Druk 3D na zamówienie — od pomysłu do gotowego elementu.</p><div><a href="#uslugi">Usługi</a><a href="#materialy">Materiały</a><a href="#wycena">Wycena</a></div><small>© {new Date().getFullYear()} DrukForma 3D · Dąbrowa Górnicza</small></footer>
     </main>
   );
 }
